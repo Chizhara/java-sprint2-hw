@@ -9,8 +9,7 @@ public class MonthlyReport {
 
         for(int i = 1; i < line.size(); i++){
             String[] contents = line.get(i).split(",");
-            monthlyReportRecord = new MonthlyReportRecord();
-            monthlyReportRecord.getInfoFromCsvRecord(contents);
+            monthlyReportRecord = new MonthlyReportRecord(contents);
 
             monthlyReportRecords.add(monthlyReportRecord);
 

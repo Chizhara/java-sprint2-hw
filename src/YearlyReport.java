@@ -14,12 +14,11 @@ public class YearlyReport {
             yearNumBuf = Integer.parseInt(contents[0]);
 
             if(yearlyReportRecords.containsKey(yearNumBuf))
-                yearlyReportRecord = yearlyReportRecords.get(yearNumBuf);
-            else
-                yearlyReportRecord = new YearlyReportRecord();
-
-            yearlyReportRecord.getInfoFromCsvRecord(contents);
-            yearlyReportRecords.put(yearNumBuf ,yearlyReportRecord);
+                yearlyReportRecords.get(yearNumBuf).getInfoFromCsvRecord(contents);
+            else{
+                yearlyReportRecord = new YearlyReportRecord(contents);
+                yearlyReportRecords.put(yearNumBuf ,yearlyReportRecord);
+            }
         }
     }
 

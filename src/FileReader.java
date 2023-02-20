@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.List;
 
 public class FileReader {
-    List<String> readFileContents(String path) {
+    public List<String> readFileContents(String path) {
         try {
             return Files.readAllLines(Path.of(path));
         } catch (IOException e) {

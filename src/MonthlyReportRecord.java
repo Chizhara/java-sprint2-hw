@@ -4,7 +4,7 @@ public class MonthlyReportRecord {
     Integer quantity;
     Integer sumOfOne;
 
-    public void getInfoFromCsvRecord(String[] line){
+    public MonthlyReportRecord(String[] line){
         itemName = line[0];
         isExpense = Boolean.parseBoolean(line[1]);
         quantity = Integer.parseInt(line[2]);
